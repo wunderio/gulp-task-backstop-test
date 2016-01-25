@@ -14,7 +14,6 @@
     "backstopjs": "^1.0.3",
     "git-guppy": "^1.0.1",
     "gulp": "^3.9.0",
-    "gulp-chug": "^0.5.1",
     "gulp-chug-pretty": "^0.1.1",
     "gulp-plumber": "^1.0.1",
     "guppy-pre-push": "^0.2.1",
