@@ -1,0 +1,24 @@
+{
+  "name": "gulp-task-backstop-test",
+  "version": "0.0.1",
+  "description": "A gulp task to test for CSS regressions optionally before push.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wunderkraut/gulp-task-backstop-test"
+  },
+  "bugs": {
+    "url": "https://github.com/wunderkraut/gulp-task-backstop-test/issues"
+  },
+  "dependencies": {
+    "backstopjs": "^1.0.3",
+    "git-guppy": "^1.0.1",
+    "gulp": "^3.9.0",
+    "gulp-chug": "^0.5.1",
+    "gulp-plumber": "^1.0.1",
+    "guppy-pre-push": "^0.2.1",
+    "lodash.defaultsdeep": "^3.10.0",
+    "path": "^0.12.7"
+  },
+  "license": "MIT"
+}
