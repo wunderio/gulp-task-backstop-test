@@ -1,12 +1,41 @@
 {
-  "name": "gulp-task-backstop-test",
-  "version": "0.0.1",
-  "description": "A gulp task to test for CSS regressions optionally before push.",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wunderkraut/gulp-task-backstop-test"
+  "_args": [
+    [
+      "gulp-task-backstop-test@github:wunderkraut/gulp-task-backstop-test",
+      "/Users/andi/workspace/avery-seed/web/themes/custom/adminx"
+    ]
+  ],
+  "_from": "wunderkraut/gulp-task-backstop-test",
+  "_id": "gulp-task-backstop-test@0.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/gulp-task-backstop-test",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/wunderkraut/gulp-task-backstop-test/master/package.json",
+      "gitUrl": "git://github.com/wunderkraut/gulp-task-backstop-test.git",
+      "httpsUrl": "git+https://github.com/wunderkraut/gulp-task-backstop-test.git",
+      "shortcut": "github:wunderkraut/gulp-task-backstop-test",
+      "ssh": "git@github.com:wunderkraut/gulp-task-backstop-test.git",
+      "sshUrl": "git+ssh://git@github.com/wunderkraut/gulp-task-backstop-test.git",
+      "type": "github"
+    },
+    "name": "gulp-task-backstop-test",
+    "raw": "gulp-task-backstop-test@github:wunderkraut/gulp-task-backstop-test",
+    "rawSpec": "github:wunderkraut/gulp-task-backstop-test",
+    "scope": null,
+    "spec": "github:wunderkraut/gulp-task-backstop-test",
+    "type": "hosted"
   },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "git://github.com/wunderkraut/gulp-task-backstop-test.git#3b2cc94a8bc748b7c0a778b97c70a4e124f29bc9",
+  "_shasum": "6946840798cabcbb9cbacbb7eb8fe71a24a95fa5",
+  "_shrinkwrap": null,
+  "_spec": "gulp-task-backstop-test@github:wunderkraut/gulp-task-backstop-test",
+  "_where": "/Users/andi/workspace/avery-seed/web/themes/custom/adminx",
   "bugs": {
     "url": "https://github.com/wunderkraut/gulp-task-backstop-test/issues"
   },
@@ -20,5 +49,19 @@
     "lodash.defaultsdeep": "^3.10.0",
     "path": "^0.12.7"
   },
-  "license": "MIT"
+  "description": "A gulp task to test for CSS regressions optionally before push.",
+  "devDependencies": {},
+  "gitHead": "3b2cc94a8bc748b7c0a778b97c70a4e124f29bc9",
+  "homepage": "https://github.com/wunderkraut/gulp-task-backstop-test#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "gulp-task-backstop-test",
+  "optionalDependencies": {},
+  "readme": "Gulp task backstop test\n=================\n\n> A gulp task to test for CSS regressions optionally before push.\n\n## Installation\n```sh\nnpm install --save-dev wunderkraut/gulp-task-backstop-test\n```\n\n## Usage\n\n### Basic usage\n\n```js\n// Require gulp.\nvar gulp = require('gulp')\n\n// Require task module and pass gulp to provide the gulp tasks.\nrequire('gulp-task-backstop-test')(gulp)\n```\n\n### Advanced usage\nYou can also pass a configuration to the task. This allows you to overwrite the default configuration and provide other configuration like a base path for your files.\n\n#### gulpfile.js\n```js\nvar gulp = require('gulp')\nvar gulpConfig = require('./gulpconfig')\n\n// Just pass the configuration object as second parameter.\nrequire('gulp-task-backstop-test')(gulp, gulpConfig)\n```\n\n#### gulpconfig.js\n```js\nvar path = require('path');\n\nmodule.exports = {\n  // Basic configuration.\n  basePath: '.',\n\n  // Overwrite default configurations.\n  backstopTest: {\n    gitHook: true\n  }\n}\n```\n\n## Contributing\n\nPull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/wunderkraut/gulp-task-backstop-test/issues/new).\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wunderkraut/gulp-task-backstop-test.git"
+  },
+  "version": "0.0.1"
 }

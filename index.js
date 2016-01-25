@@ -22,24 +22,24 @@ module.exports = function (gulp, gulpConfig) {
   };
 
   gulp.task('bs-reference', function() {
-    gulp.src('./node_modules/gulp-task-backstop-test/node_modules/backstopjs/gulpfile.js')
+    gulp.src('./node_modules/backstopjs/gulpfile.js')
       .pipe(plumber({
         errorHandler: onError
       }))
       .pipe(chug({
         tasks:  ['reference'],
-        args:   ['--backstopConfigFilePath=../../../../backstop.json']
+        args:   ['--backstopConfigFilePath=../../backstop.json']
       }));
   });
 
   gulp.task('bs-test', function() {
-    gulp.src('./node_modules/gulp-task-backstop-test/node_modules/backstopjs/gulpfile.js')
+    gulp.src('./node_modules/backstopjs/gulpfile.js')
       .pipe(plumber({
         errorHandler: onError
       }))
       .pipe(chug({
         tasks:  ['test'],
-        args:   ['--backstopConfigFilePath=../../../../backstop.json']
+        args:   ['--backstopConfigFilePath=../../backstop.json']
       }));
   });
 
