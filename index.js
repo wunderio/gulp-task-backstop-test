@@ -3,7 +3,7 @@
 var path = require('path');
 var defaultsDeep = require('lodash.defaultsdeep');
 var plumber = require('gulp-plumber');
-var chug = require('gulp-chug');
+var chug = require('gulp-chug-pretty');
 
 module.exports = function (gulp, gulpConfig) {
 
@@ -12,7 +12,7 @@ module.exports = function (gulp, gulpConfig) {
   // Merge default config with gulp config.
   var defaultConfig = {
     backstopTest: {
-      gitHook: true
+      gitHook: false
     }
   };
 
@@ -21,24 +21,25 @@ module.exports = function (gulp, gulpConfig) {
     console.log(err);
   };
 
-  gulp.task('bs-reference',
-    'create reference files for backstop tests', function() {
-    gulp.src('./node_modules/backstopjs/gulpfile.js')
+  gulp.task('bs-reference', function() {
+    gulp.src('./node_modules/gulp-task-backstop-test/node_modules/backstopjs/gulpfile.js')
       .pipe(plumber({
         errorHandler: onError
       }))
       .pipe(chug({
-        tasks:  ['reference']
+        tasks:  ['reference'],
+        args:   ['--backstopConfigFilePath=../../../../backstop.json']
       }));
   });
 
-  gulp.task('bs-test', 'run backstop test', function() {
-    gulp.src('./node_modules/backstopjs/gulpfile.js')
+  gulp.task('bs-test', function() {
+    gulp.src('./node_modules/gulp-task-backstop-test/node_modules/backstopjs/gulpfile.js')
       .pipe(plumber({
         errorHandler: onError
       }))
       .pipe(chug({
-        tasks:  ['test']
+        tasks:  ['test'],
+        args:   ['--backstopConfigFilePath=../../../../backstop.json']
       }));
   });
 
