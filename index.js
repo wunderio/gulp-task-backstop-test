@@ -12,7 +12,6 @@ module.exports = function (gulp, gulpConfig) {
   // Merge default config with gulp config.
   var defaultConfig = {
     backstopTest: {
-      gitHook: false
     }
   };
 
@@ -42,10 +41,4 @@ module.exports = function (gulp, gulpConfig) {
         args:   ['--backstopConfigFilePath=../../backstop.json']
       }));
   });
-
-  gulp.task('pre-push', function() {
-    if (config.gitHook === true) {
-      gulp.start('bs-test');
-    }
-  })
 };

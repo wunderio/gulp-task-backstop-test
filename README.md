@@ -40,9 +40,8 @@ module.exports = {
   // Basic configuration.
   basePath: '.',
 
-  // Overwrite default configurations.
+  // Overwrite default configuration.
   backstopTest: {
-    gitHook: true
   }
 }
 ```
